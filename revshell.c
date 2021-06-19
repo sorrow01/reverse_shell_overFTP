@@ -30,11 +30,10 @@ int main ()
     strcat(filename,"_");
     strcat(filename,usrname);
 
-    strcpy(input_filename,filename);         //store the input file name into a string
-    strcat(input_filename,".inpt");
 
-    strcpy(output_filename,filename);        //store the output file name into a string
-    strcat(output_filename,".outp");
+    sprintf(input_filename, "%s.inpt", filename);   //store the input file name into a string
+
+    sprintf(output_filename, "%s.outp", filename);  //store the output file name into a string
 
     strcat(input_path,input_filename);           //path of the files
     strcat(output_path,output_filename);
